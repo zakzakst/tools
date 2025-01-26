@@ -1,19 +1,20 @@
 import type { Metadata } from "next";
 import Title from "@/app/_components/Title";
 
-const title = "サンプル";
+const title = "ミーティング計画";
 
 export const metadata: Metadata = {
   title: title,
   description: title,
 };
 
-const Sample = () => {
+const MeetingPlan = () => {
   return (
     <>
       <Title>{title}</Title>
+      <div style={{ paddingBottom: "2000px" }}>spacer</div>
     </>
   );
 };
 
-export default Sample;
+export default MeetingPlan;
