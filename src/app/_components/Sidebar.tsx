@@ -6,7 +6,6 @@ import { Button, Menu } from "antd";
 import {
   MenuUnfoldOutlined,
   MenuFoldOutlined,
-  AppstoreOutlined,
   ContainerOutlined,
 } from "@ant-design/icons";
 import classNames from "classnames";
@@ -22,18 +21,27 @@ const Links = [
     id: "sample",
     link: "/sample",
   },
+  {
+    id: "meeting-plan",
+    link: "/meeting-plan",
+  },
 ];
 
 const items: MenuItem[] = [
   {
     key: "home",
-    icon: <AppstoreOutlined />,
+    icon: <ContainerOutlined />,
     label: "ホーム",
   },
   {
     key: "sample",
     icon: <ContainerOutlined />,
     label: "サンプル",
+  },
+  {
+    key: "meeting-plan",
+    icon: <ContainerOutlined />,
+    label: "ミーティング計画",
   },
 ];
 
@@ -70,7 +78,7 @@ const Sidebar = () => {
   };
 
   return (
-    <aside className="relative">
+    <aside className="relative h-full">
       <Button
         type="primary"
         onClick={toggleCollapsed}
@@ -84,7 +92,7 @@ const Sidebar = () => {
         selectedKeys={selectedKeys}
         onClick={movePage}
         items={items}
-        className={classNames("h-screen", "pt-[36px]", {
+        className={classNames("h-full", "pt-[36px]", {
           "w-[200px]": !collapsed,
         })}
       />

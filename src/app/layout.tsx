@@ -20,8 +20,12 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body className="grid grid-cols-[auto_1fr] antialiased">
-        <Sidebar />
-        <main>{children}</main>
+        <div className="h-screen overflow-y-auto">
+          <Sidebar />
+        </div>
+        <main className="h-screen overflow-y-auto">
+          <div className="p-4">{children}</div>
+        </main>
       </body>
     </html>
   );
