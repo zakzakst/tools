@@ -1,16 +1,7 @@
-import type { Metadata } from "next";
-import "@ant-design/v5-patch-for-react-19";
-import Sidebar from "@/app/_components/Sidebar";
 import "./globals.css";
 
 // TODO:
-// - サイドバーのレスポンシブ対応
 // - フォントファミリーの指定修正
-
-export const metadata: Metadata = {
-  title: "ツール",
-  description: "ツール",
-};
 
 export default function RootLayout({
   children,
@@ -19,14 +10,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className="grid grid-cols-[auto_1fr] antialiased">
-        <div className="h-screen overflow-y-auto">
-          <Sidebar />
-        </div>
-        <main className="h-screen overflow-y-auto">
-          <div className="p-4">{children}</div>
-        </main>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
