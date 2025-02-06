@@ -8,8 +8,11 @@ type Props = {
   };
 };
 
-export default async function Photo({ params: { photoId } }: Props) {
+export default async function Photo({ params }: Props) {
+  const { photoId } = await params;
+  console.log(photoId);
   const photoData = catPhotos.find((photo) => photo.id === parseInt(photoId));
+  console.log(photoData);
 
   if (!photoData?.id) {
     return <h1 className="text-center">No Photo Found for that ID.</h1>;

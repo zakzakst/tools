@@ -1,7 +1,10 @@
 {
   "folders": [
     {
-      "path": "./",
-    },
+      "path": "./"
+    }
   ],
+  "settings": {
+    "workbench.editor.pinnedTabsOnSeparateRow": true
+  }
 }

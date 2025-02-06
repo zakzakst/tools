@@ -1,16 +1,16 @@
 import Header from "../_components/practice/Header";
 
 export default function RootLayout({
+  // modal,
   children,
-  modal,
 }: Readonly<{
+  // modal: React.ReactNode;
   children: React.ReactNode;
-  modal: React.ReactNode;
 }>) {
   return (
     <>
       <Header />
-      {modal}
+      {/* {modal} */}
       {children}
     </>
   );
